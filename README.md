@@ -55,9 +55,17 @@ A wallet kit in which a physical NFC card must be tapped to approve each transac
 - **Token approvals manager, security center, app lock**: Revoke risky allowances.
 - **White-label in one file**: Rebrand all four apps for a client.
 
+## How it works
+
+A technical case study of the architecture, one end-to-end flow, the key engineering decisions and how you would build something like this: **[docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md)**.
+
 ## A look at the code
 
-**NFC spend policy**: [`snippets/nfc_spend_policy.dart`](snippets/nfc_spend_policy.dart). Spender cards get a daily limit per network, counted over a rolling 24-hour window. A payment that would go over is refused until an Owner or Backup card is held.
+Real excerpts from the source, shown for illustration:
+
+- **NFC spend policy** ([`snippets/nfc_spend_policy.dart`](snippets/nfc_spend_policy.dart)): Spender cards get a daily limit per network, counted over a rolling 24-hour window. A payment that would go over is refused until an Owner or Backup card is held.
+- **Network time for the lost-card wait** ([`snippets/trusted_time.dart`](snippets/trusted_time.dart)): The 72-hour lost-card switch-off is measured with the median Date header of a few HTTPS hosts, not the phone clock. With no answer the wait does not finish.
+- **Card guard inside every signer** ([`snippets/nfc_signing_guard.dart`](snippets/nfc_signing_guard.dart)): Every function that produces a signature calls the guard first, so a payment path that forgot the card prompt fails instead of signing silently.
 
 ## Requirements (full version)
 
