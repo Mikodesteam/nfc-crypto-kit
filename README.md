@@ -8,6 +8,8 @@
   <b>Crypto wallet where an NFC card confirms every signature.</b>
 </p>
 
+<p align="center"><sub>NFC crypto wallet source code · card-confirmed signing · Flutter iOS & Android · hardware-style security</sub></p>
+
 <p align="center">
   <a href="https://nfccrypto-demo.mikodes.com/"><b>▶ Live demo</b></a> ·
   <a href="https://nfccrypto.mikodes.com/"><b>Website</b></a> ·
@@ -77,6 +79,20 @@ Real excerpts from the source, shown for illustration:
 - Card Studio OS
 
 Not included: Physical NFC cards; NFC reader hardware; Hosting and domain for the card link host and its app-link files; Apple Developer and Google Play developer accounts, app signing, store review; Third-party API keys/subscriptions.
+
+## FAQ
+
+**Is this the full source code?**  
+No. This repository is a showcase with screenshots, a technical case study and real code excerpts. The complete NFC Crypto Kit source code is sold at [store.mikodes.com/p/nfccrypto](https://store.mikodes.com/p/nfccrypto/).
+
+**What is NFC Crypto Kit built with?**  
+Flutter, Python.
+
+**Can I try it before buying?**  
+Yes, open the [live demo](https://nfccrypto-demo.mikodes.com/).
+
+**Do I get help with the installation?**  
+Free setup help is included with the store purchase; questions go to [mikodes.com/support](https://mikodes.com/support).
 
 ## Get the full source code
 
